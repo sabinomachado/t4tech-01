@@ -34,5 +34,64 @@ class CategoryController extends Controller
         }
     }
 
+    public function create()
+    {
+        try {
+            return view('categorias.create');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+            exit();
+        }
+    }
+
+    public function edit($id)
+    {
+        try {
+            $category = $this->categoryRepository->getById($id);
+            return view('categorias.edit', compact('category'));
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+            exit();
+        }
+    }
+
+    public function update(CategoryUpdateRequest $request, $id)
+    {
+        try {
+            $data = $request->validated();
+            $this->categoryRepository->update($id, $data);
+            $categories = $this->categoryRepository->getAll();
+            return view('categorias.index', compact('categories'));
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+            exit();
+        }
+    }
+
+    public function destroy($id)
+    {
+        try {
+            $this->categoryRepository->delete($id);
+            $categories = $this->categoryRepository->getAll();
+            return view('categorias.index', compact('categories'));
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+            exit();
+        }
+    }
+
+    public function store(CategoryCreateRequest $request)
+    {
+        try {
+            $data = $request->validated();
+            $this->categoryRepository->create($data);
+            $categories = $this->categoryRepository->getAll();
+            return view('categorias.index', compact('categories'));
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+            exit();
+        }
+    }
+
 
 }

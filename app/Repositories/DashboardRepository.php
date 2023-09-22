@@ -10,18 +10,18 @@ class DashboardRepository implements DashboardRepositoryInterface
 {
     // public function __construct()
     // {
-    //  //  
+    //  //
     // }
 
     public function getCategorys()
     {
-        $teste = 5;
-        return $teste;
+        $categorys = Category::all()->count();
+        return $categorys;
     }
 
     public function getNews()
        {
-        $teste2 = 9;
-        return $teste2;
+        $news = News::all()->count();
+        return $news;
     }
 }

@@ -19,6 +19,8 @@
         type="text/css"
         />
 
+        <x-head.tinymce-config/>
+        
         <script src="https://cdn.tailwindcss.com"></script>
 
         <!-- Scripts -->
