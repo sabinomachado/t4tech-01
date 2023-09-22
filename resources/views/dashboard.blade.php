@@ -14,10 +14,10 @@
                 </div>
                 <div class="card-body items-center text-center">
                   <h2 class="card-title">Categorias</h2>
-                  <p>Atualmente temos XX categorias cadastradas</p>
+                  <p>Atualmente temos {{$categorys}} categorias cadastradas</p>
                   <div class="card-actions">
                     <button class="btn btn-wide btn-primary" href="/categorias/index" >
-                        <a href="/noticias/index">
+                        <a href="/categorias">
                             Visualizar
                         </a>
                         </button>
@@ -25,7 +25,7 @@
                 </div>
             </div>
         </div>
-    
+
         <!-- Segundo card (duplicado e centralizado) -->
         <div class="p-6 m-4">
             <div class="card w-96 bg-base-100 shadow-xl">
@@ -38,9 +38,12 @@
                 </div>
                 <div class="card-body items-center text-center">
                   <h2 class="card-title">Notícias</h2>
-                  <p>Atualmente temos XX categorias cadastradas</p>
+                  <p>Atualmente temos {{$news}} noticias cadastradas</p>
                   <div class="card-actions">
-                    <button class="btn btn-wide btn-primary">Visualizar</button>
+                    <button class="btn btn-wide btn-primary">
+                        <a href="/noticias">
+                            Visualizar
+                        </a></button>
                   </div>
                 </div>
             </div>

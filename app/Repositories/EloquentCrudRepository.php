@@ -14,9 +14,10 @@ class EloquentCrudRepository implements CrudRepository
         $this->model = $model;
     }
 
-    public function getAll(): \Illuminate\Database\Eloquent\Collection
+    public function getAll()
     {
-        return $this->model->all();
+        return $this->model->paginate(5);
+        //return $this->model->all();
     }
 
     public function getById($id)

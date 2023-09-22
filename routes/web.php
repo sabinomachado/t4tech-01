@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +30,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('/noticias', NewsController::class);
+Route::resource('/categorias', CategoryController::class);
 
 
 require __DIR__.'/auth.php';
