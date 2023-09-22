@@ -6,21 +6,22 @@
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>Nome</th>
-                  <th>Notícias</th>
+                  <th>Título</th>
+                  <th>Categoria</th>
                   <th>Editar</th>
                   <th>Excluir</th>
                 </tr>
               </thead>
               <tbody>
-                <!-- row 1 -->
-                <tr>
-                  <th>1</th>
-                  <td>Cy Ganderton</td>
-                  <td>Quality Control Specialist</td>
-                  <td>Blue</td>
-                  <td>Blue</td>
-                </tr>
+                  @foreach ($news as $key => $n)
+                  <tr>
+                    <th>{{$n->id}}</th>
+                    <td>{{$n->title}}</td>
+                    <td>{{$n->category['name']}}</td>
+                    <td><button class="btn btn-info">Editar</button></td>
+                    <td><button class="btn btn-error">Excluir</button></td>
+                  </tr>
+                    @endforeach
               </tbody>
             </table>
           </div>

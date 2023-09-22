@@ -17,7 +17,7 @@
                   <p>Atualmente temos XX categorias cadastradas</p>
                   <div class="card-actions">
                     <button class="btn btn-wide btn-primary" href="/categorias/index" >
-                        <a href="/noticias/index">
+                        <a href="/categorias">
                             Visualizar
                         </a>
                         </button>
@@ -40,7 +40,10 @@
                   <h2 class="card-title">Notícias</h2>
                   <p>Atualmente temos XX categorias cadastradas</p>
                   <div class="card-actions">
-                    <button class="btn btn-wide btn-primary">Visualizar</button>
+                    <button class="btn btn-wide btn-primary">
+                        <a href="/noticias">
+                            Visualizar
+                        </a></button>
                   </div>
                 </div>
             </div>
