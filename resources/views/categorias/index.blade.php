@@ -17,7 +17,7 @@
                         <th>#</th>
                         <th>Título</th>
                         <th>Editar</th>
-                        <th>Excluir</th>
+                        @can('editar')<th>Excluir</th>@endcan
                     </tr>
                     </thead>
                     <tbody>
@@ -31,6 +31,7 @@
                                     </a>
                                 </button>
                             </td>
+                            @can('editar')
                             <td>
                                 <form method="POST" action="{{route('categorias.destroy', $category->id) }}"  >
                                     @method('DELETE')
@@ -38,6 +39,7 @@
                                     <button type="submit" class="btn btn-error">Excluir</button>
                                 </form>
                             </td>
+                            @endcan
                         </tr>
                     @endforeach
                     </tbody>

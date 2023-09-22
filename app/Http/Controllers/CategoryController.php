@@ -2,16 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+
 use App\Http\Requests\CategoryCreateRequest;
 use App\Http\Requests\CategoryUpdateRequest;
-use App\Http\Resources\CategoryResource;
-use App\Models\Category;
-use App\Policies\CategoryPolicy;
 use App\Repositories\CategoryRepository;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
+
 
 
 class CategoryController extends Controller
@@ -70,6 +66,7 @@ class CategoryController extends Controller
 
     public function destroy($id)
     {
+       Gate::authorize('editar');
         try {
             $this->categoryRepository->delete($id);
             $categories = $this->categoryRepository->getAll();
