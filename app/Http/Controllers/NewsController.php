@@ -2,16 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+
 use App\Http\Requests\NewsCreateRequest;
 use App\Http\Requests\NewsUpdateRequest;
-use App\Http\Resources\NewsResource;
 use App\Repositories\CategoryRepository;
-use http\Env\Response;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use App\Repositories\NewsRepository;
-use Illuminate\Http\Resources\Json\ResourceCollection;
+
 
 class NewsController extends Controller
 {
