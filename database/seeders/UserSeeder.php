@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
             'name' => "Newton Admin",
             'email' => "newton@t4tech.com",
             'email_verified_at' => now(),
-            'password' => 'DevPhpLaravel10+', // password
+            'password' => "DevPhpLaravel10+", // password
             'nivel_id' => 1,
             ]);
 
@@ -25,7 +25,7 @@ class UserSeeder extends Seeder
             'name' => "Sabino Editor",
             'email' => "sabino@machado.com",
             'email_verified_at' => now(),
-            'password' => 'DevPhpLaravel10+', // password
+            'password' => "DevPhpLaravel10+", // password
             'nivel_id' => 2,
         ]);
     }

@@ -11,7 +11,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(abstract: DashboardRepositoryInterface::class, concrete: DashboardRepository::class);
+        $this->app->bind(abstract: ModelRepositoryInterface::class, concrete: NewsRepository::class);
+        $this->app->bind(abstract: ModelRepositoryInterface::class, concrete: CategoryRepository::class);
+        $this->app->bind(EloquentCrudRepository::class, CrudRepository::class);
     }
 
     /**

@@ -1,15 +1,47 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
+
+    <div class="flex justify-center items-center min-h-screen">
+        <!-- Primeiro card -->
+        <div class="p-6 m-4">
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="flex justify-center items-center px-10 pt-10">
+                    <div class="avatar">
+                        <div class="w-24 rounded-xl">
+                          <img src="https://ui-avatars.com/api/?name={{$categorys}}&background=ff3903&color=fff" />
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Categorias</h2>
+                  <p>Atualmente temos XX categorias cadastradas</p>
+                  <div class="card-actions">
+                    <button class="btn btn-wide btn-primary" href="/categorias/index" >
+                        <a href="/noticias/index">
+                            Visualizar
+                        </a>
+                        </button>
+                  </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Segundo card (duplicado e centralizado) -->
+        <div class="p-6 m-4">
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="flex justify-center items-center px-10 pt-10">
+                    <div class="avatar">
+                        <div class="w-24 rounded-xl">
+                          <img src="https://ui-avatars.com/api/?name={{$news}}&background=ff3193&color=fff" />
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Notícias</h2>
+                  <p>Atualmente temos XX categorias cadastradas</p>
+                  <div class="card-actions">
+                    <button class="btn btn-wide btn-primary">Visualizar</button>
+                  </div>
                 </div>
             </div>
         </div>
